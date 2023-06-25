@@ -1,0 +1,11 @@
+This Project is build by Radiant 
+
+Stack Used in this project are
+- Nodejs
+- Expressjs
+- Mongodb
+
+npm install
+
+npm run dev 
+
