@@ -13,5 +13,9 @@ app.use("/api/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 app.listen(port, () => {
-    console.log(`server running on port ${port}`);
+    if(!connectDb){
+        console.log(`Unable to connect Database`)
+    } else {
+        console.log(`server running on port ${port}`);
+    }
 }); 
