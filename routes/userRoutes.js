@@ -9,7 +9,7 @@ router.post("/register", createUser);
 
 router.post("/login", loginUser);
 
-router.get("/current", validateToken, getUser, );
+router.get("/current", validateToken, getUser);
 
 // router.get("/register", (req, res) => {
 //     res.json({ message: "Get registered users"});
@@ -23,4 +23,4 @@ router.get("/current", validateToken, getUser, );
 //     res.json({ message: "Get registered users"});
 // });
 
-module.exports = router
+module.exports = router;

@@ -55,7 +55,7 @@ const loginUser = asyncHandler(async (req, res) => {
                 id: user.id
             }
         }, process.env.ACCESS_TOKEN_SEC,
-        {expiresIn: "1m"}
+        {expiresIn: "5m"}
         );
         res.status(200).json({ accessToken });
     }else{
@@ -68,6 +68,6 @@ const loginUser = asyncHandler(async (req, res) => {
 //@route GET /api/users/current
 //@access private
 const getUser = asyncHandler(async (req, res) => {
-    res.json(req.user);
+    res.json(req.user, `msg: User Signed In Succefully`);
 })
 module.exports = { createUser, loginUser, getUser }
